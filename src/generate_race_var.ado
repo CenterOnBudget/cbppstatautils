@@ -193,7 +193,7 @@ program generate_race_var
 			}
 			if `categories' >= 4 {
 				replace `new_varname' = 2 if prdtrace == 2
-				replace `new_varname' = 4 if !inlist(rac1p, 1, 2)
+				replace `new_varname' = 4 if !inlist(prdtrace, 1, 2)
 			}
 			if `categories' >= 5 {
 				replace `new_varname' = . if `new_varname' == 4
